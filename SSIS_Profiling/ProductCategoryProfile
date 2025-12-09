@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{38F122A0-B0E8-4F16-9DAA-6240A864312E}" Name="(localdb)\MSSQLLocalDB.SLIIT_Retail_Staging">
+      <DtsConnectionManagerID>(localdb)\MSSQLLocalDB.SLIIT_Retail_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E3D4FBBA-3A19-4C0D-B4E5-50133C89F9BC}" Name="(localdb)\MSSQLLocalDB.SLIIT_Retail_Staging 1">
+      <DtsConnectionManagerID>(localdb)\MSSQLLocalDB.SLIIT_Retail_Staging 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{27B88ADA-197A-4293-9674-09AF4052A4BA}" Name="CustomerAddressProfile">
+      <DtsConnectionManagerID>CustomerAddressProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C7C4A951-3EA4-4D64-A648-45739BE864AC}" Name="CustomerProfile">
+      <DtsConnectionManagerID>CustomerProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{1E9969C6-5062-413E-B3F3-896D5F086D13}" Name="ProductCategoryProfile">
+      <DtsConnectionManagerID>ProductCategoryProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{20A60877-86B2-41C4-A591-ED85057D8FE0}" Name="ProductProfile">
+      <DtsConnectionManagerID>ProductProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9D0AB651-6A26-4357-BA7B-09B6C4F61653}" Name="ProductSubCategoryProfile">
+      <DtsConnectionManagerID>ProductSubCategoryProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D6B13FA1-0C22-4DA9-9B93-7F1BDF54C804}" Name="SalesOrderDetailsProfile">
+      <DtsConnectionManagerID>SalesOrderDetailsProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{27FCBFFC-EFF4-4283-907D-6F8509EE1C23}" Name="SalesOrderHeaderProfile">
+      <DtsConnectionManagerID>SalesOrderHeaderProfile</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table Schema="dbo" Table="StgProductCategory" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>4</MaxValue>
+        <Mean>2.5</Mean>
+        <StdDev>1.11803398874989</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2008-04-30T00:00:00.0000000</MinValue>
+        <MaxValue>2008-04-30T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>4</MaxValue>
+        <Mean>2.5</Mean>
+        <StdDev>1.11803398874989</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2008-04-30T00:00:00.0000000</MinValue>
+        <MaxValue>2008-04-30T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <KeyColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <KeyColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <KeyColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Accessories</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bikes</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Clothing</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Components</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <KeyColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Accessories</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bikes</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Clothing</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Components</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2008-04-30T00:00:00.0000000</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2008-04-30T00:00:00.0000000</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ACCESSORIES</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>COMPONENTS</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CLOTHING</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>BIKES</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq1" IsExact="true">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ACCESSORIES</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>COMPONENTS</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CLOTHING</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>BIKES</RegexText>
+            <Frequency>25</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{38F122A0-B0E8-4F16-9DAA-6240A864312E}</DataSourceID>
+        <Table DataSource="(localdb)\MSSQLLocalDB" Database="SLIIT_Retail_Staging" Schema="dbo" Table="StgProductCategory" RowCount="4" />
+        <DeterminantColumns>
+          <Column Name="Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

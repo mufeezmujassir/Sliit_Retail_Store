@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36631.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SLIIT_SSAS", "SLIIT_SSAS\SLIIT_SSAS.dwproj", "{BD9BA6B1-0BB5-41FF-AA21-69C8A9CB567A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD9BA6B1-0BB5-41FF-AA21-69C8A9CB567A}.Development|Default.ActiveCfg = Development
+		{BD9BA6B1-0BB5-41FF-AA21-69C8A9CB567A}.Development|Default.Build.0 = Development
+		{BD9BA6B1-0BB5-41FF-AA21-69C8A9CB567A}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A011B270-4C6B-42BA-B6D2-2B15B454DAC6}
+	EndGlobalSection
+EndGlobal
